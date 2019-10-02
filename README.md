@@ -18,8 +18,8 @@
 |name|string|
 
 ### Association
-- has many :group_users
-- has many :group_users, throgh: :groups_users
+- has many :groups_users
+- has many :groups_users, throgh: :groups_users
 |username|string|
 
 ### Association
