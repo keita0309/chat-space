@@ -20,6 +20,10 @@
 ### Association
 - has many :group_users
 - has many :group_users, throgh: :groups_users
+|username|string|
+
+### Association
+- has many :groups_users, throgh: :groups_users
 - has many :messages
 
 ## groupテーブル
@@ -30,6 +34,10 @@
 
 ### Association
 - has many :group_users
+|groupname|string|
+|chatmember|string|
+
+### Association
 - has many :groups_users, throgh: :groups_users
 - has many :messages
 
