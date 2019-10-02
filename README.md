@@ -38,4 +38,4 @@
 |id|integet|
 |body|text|
 |group_id|integet|
-|user_id|integet|
+|user_id|integet
