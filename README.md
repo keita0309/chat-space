@@ -15,9 +15,10 @@
 |id|integet|
 |email|string|
 |password|string|
-|username|string|
+|name|string|
 
 ### Association
+- has many :group_users
 - has many :group_users, throgh: :groups_users
 - has many :messages
 
@@ -25,10 +26,10 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integet|
-|groupname|string|
-|chatmember|string|
+|name|string|
 
 ### Association
+- has many :group_users
 - has many :groups_users, throgh: :groups_users
 - has many :messages
 
@@ -37,5 +38,6 @@
 |------|----|-------|
 |id|integet|
 |body|text|
+|image|string|
 |group_id|integet|
-|user_id|integet
+|user_id|integet|
