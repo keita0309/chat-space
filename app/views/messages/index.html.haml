@@ -43,8 +43,8 @@
         .new-message__input-box__image
           %label
             = fa_icon 'image', class: 'icon-image'
-            %input{:name => "image", :style => "display:none", :type => "file"}/
+            %input{name: "image", style: "display:none", type: "file"}/
 
       .new-message__send
         send
-        %input{:type => "submit", :value => "send", :style => "display:none"}
+        %input{type: "submit", value: "send", style: "display:none"}/
