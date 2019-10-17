@@ -10,6 +10,7 @@ $color: #38aef0;
     background-color: #fafafa;
     padding: 46px 40px;
     height: calc(100vh - 190px);
+    overflow: scroll;
     .message{
       padding-bottom: 40px;
       &__up{
@@ -79,7 +80,15 @@ $color: #38aef0;
       &__image {
         font-size: 20px;
         line-height: 50px;
+        .fa{
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+        }
       }
+
       .hidden {
         display: none;
       }
