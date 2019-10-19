@@ -3,11 +3,14 @@
   .main-header
     .main-header__left-box
       .main-header__left-box__group
-        あ
+        = @group.name
       .main-header__left-box__member
-        あ
+        Members:
+        - @group.users.each do |user|
+          = user.name
     .main-header__edit-btn
-      = link_to 'edit', '#', class: "btn"
+      = link_to edit_group_path(@group.id) do
+        .btn Edit
 
   .messages
     = render @messages

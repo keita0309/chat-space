@@ -1,7 +1,7 @@
 .chat-side
   .header
     .header__name
-      ユーザーネーム
+      = current_user.name
     .header__list
       .header__list__new-group
         = link_to new_group_path do
@@ -17,3 +17,4 @@
             = group.name
           .group__message
             = group.show_last_message
+

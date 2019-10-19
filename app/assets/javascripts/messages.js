@@ -39,5 +39,4 @@ $(function(){
     })
     $('.form__submit').removeAttr('data-disable-with')
   })
-
 })
