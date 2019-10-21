@@ -4,5 +4,11 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :edit, :update]
   resources :groups, only: [:new, :create, :edit, :update] do
   resources :messages, only: [:index, :create]
+  # コントローラー直下にあるデレクトリーを呼ぶ
+  namespace :api do
+    # defaultsオプションでjson形式でレスポンス
+    resources :messages, onle: :index, defaults: { format: 'json'}
+  end
+  
   end
 end
