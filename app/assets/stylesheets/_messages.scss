@@ -1,5 +1,4 @@
 *{box-sizing: border-box;}
-*{box-sizing: border-box;}
 $color-white: white;
 $color: #38aef0;
 .chat-main{
@@ -13,23 +12,29 @@ $color: #38aef0;
     overflow: scroll;
     .message{
       padding-bottom: 40px;
-      &__up{
+      .upper-message{
         display: flex;
         margin-bottom: 10px;
 
-        &__user{
+        
+        &__user-name{
           font-size: 16px;
           color: #434A54;
+          
+          
         }
         &__date{
           font-size: 12px;
           margin-left: 10px;
           color: #999999;
+          
+
         }
       }
-      &__text{
+      .lower-meesage{
         font-size: 14px;
         color: #434A54;
+        clear: both;
       }
     }
   }
@@ -38,6 +43,7 @@ $color: #38aef0;
     justify-content: space-between;
     padding: 0 40px;
     border-bottom: 1px solid #eeeeee;
+    // text-decoration: none;
     &__left-box{
       margin-top: 35px;
       
@@ -52,13 +58,18 @@ $color: #38aef0;
         margin-top: 15px;
       }
     }
-    &__edit-btn{
+    &__edit-btn{ 
       height: 40px;
       padding: 0 20px;
       margin-top: 28px;
       border: 1px solid $color;
       line-height: 40px;
+      // text-decoration: none;
     }
+       .btn{
+        text-decoration: none;
+
+       }
   }
 
   .form {
