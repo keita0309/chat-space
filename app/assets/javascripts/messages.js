@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
-
-    image = (message.image) ? `<img class= "lower-message__image" src=${message.image}>` : "";
+    // var content =(message.content)?`<div class = "Lower-message" src=${message.content}>`:"";
+    var image = (message.image) ? `<img src=${message.image}>` : "";
 
     var html =  `<div class="message" data-id="${message.id}"> 
                   <div class = "upper-message">
@@ -13,8 +13,8 @@ $(function(){
                       </div>
                   </div>
                   <div class = "Lower-message">
-                    <p class=""Lower-message__content">
-                      ${ message.content }
+                    <p class="Lower-message__content">
+                      ${message.content}
                     </p>
                     ${image}
                   </div>
@@ -58,6 +58,7 @@ $(function(){
       })
 
       .done(function (messages) { //通信成功したら、controllerから受け取ったデータ（messages)を引数にとって以下のことを行う
+        console.log(messages);
         var insertHTML = '';//追加するHTMLの入れ物を作る
         messages.forEach(function (message) {//配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
           insertHTML = buildHTML(message); //メッセージが入ったHTMLを取得
@@ -71,6 +72,6 @@ $(function(){
       });
     }
   };
-  setInterval(reloadMessages, 5000);
+  setInterval(reloadMessages, 20000);
   
 });
