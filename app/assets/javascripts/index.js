@@ -62,7 +62,7 @@ function appendmenber(id,name){
     appendmenber(id,name);
   })
   $(document).on("click",".user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn",function(e){
-    $('.chat-group-user').remove();
+    $(this).parent().remove();
   })
 
   
